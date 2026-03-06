@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Incremental</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <div id="float-container"></div>
+    <div class="container">
+        <h1 class="game-title">Incremental</h1>
+
+        <div class="resources">
+            <div class="resource-panel">
+                <p id="gold-label">Gold: 0</p>
+
+                <div class="progress-bar">
+                    <div id="gold-progress-fill" class="progress-fill"></div>
+                </div>
+
+                <p id="goal-label">0% to goal</p>
+            </div>
+
+            <div class="resource-panel">
+                <p id="platinum-label">Platinum: 0</p>
+            </div>
+        </div>
+
+        <div class="generators">
+            <div class="generator-panel">
+                <h2>Miner</h2>
+                <p id="miner-count-label">Owned: 1</p>
+                <p id="miner-rate-label">Rate: 1</p>
+                <button data-buy="miner" id="miner-buy-button">Buy (10 gold)</button>
+                <button data-upgrade="miner" id="miner-upgrade-button">Upgrade (20 platinum)</button>
+            </div>
+
+            <div class="generator-panel">
+                <h2>Drill</h2>
+                <p id="drill-count-label">Owned: 0</p>
+                <p id="drill-rate-label">Rate: 5</p>
+                <button data-buy="drill" id="drill-buy-button">Buy (50 gold)</button>
+                <button data-upgrade="drill" id="drill-upgrade-button">Upgrade (50 platinum)</button>
+            </div>
+
+            <div class="generator-panel">
+                <h2>Excavator</h2>
+                <p id="excavator-count-label">Owned: 0</p>
+                <p id="excavator-rate-label">Rate: 20</p>
+                <button data-buy="excavator" id="excavator-buy-button">Buy (200 gold)</button>
+                <button data-upgrade="excavator" id="excavator-upgrade-button">Upgrade (150 platinum)</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="speed-panel">
+                <h3>Speed Controls</h3>
+                <button data-speed="1" class="speed-active">1x</button>
+                <button data-speed="2">2x</button>
+                <button data-speed="4">4x</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>You Win!</h2>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
